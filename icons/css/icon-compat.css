@@ -1,0 +1,128 @@
+/*
+ * Auki Henry icon compatibility layer
+ * legacy gi-* icon classes to self-hosted Font Awesome Free 7.
+ *
+ * Requires:
+ *   fontawesome.min.css
+ *   solid.min.css
+ *   regular.min.css
+ *   brands.min.css
+ */
+
+/* Base legacy icon classes */
+.gis,
+.gi-solid,
+.gi-regular,
+.gir,
+.gib,
+.gi-brands {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-rendering: auto;
+}
+
+/* Solid */
+.gis,
+.gi-solid {
+    font-family: "Font Awesome 7 Free" !important;
+    font-weight: 900 !important;
+}
+
+/* Regular */
+.gi-regular,
+.gir {
+    font-family: "Font Awesome 7 Free" !important;
+    font-weight: 400 !important;
+}
+
+/* Brands */
+.gib,
+.gi-brands {
+    font-family: "Font Awesome 7 Brands" !important;
+    font-weight: 400 !important;
+}
+
+/* Common size/utility classes used by this theme */
+.gi-lg { font-size: 1.25em; }
+.gi-fw { width: 1.25em; text-align: center; }
+
+/* Legacy animation used by some comment icons */
+.gi-flip {
+    animation: auki-gi-flip 1.5s ease-in-out infinite;
+}
+@keyframes auki-gi-flip {
+    0%, 100% { transform: rotateY(0deg); }
+    50% { transform: rotateY(180deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .gi-flip { animation: none; }
+}
+
+/* ---------------------------------------------------------
+   Icons actually used by the current Blogger template
+   --------------------------------------------------------- */
+
+/* Solid */
+.gi-bars::before            { content: "\f0c9"; }
+.gi-search::before          { content: "\f002"; }
+.gi-sun::before             { content: "\f185"; }
+.gi-moon::before            { content: "\f186"; }
+.gi-comments::before        { content: "\f086"; }
+.gi-car::before             { content: "\f1b9"; }
+.gi-tag::before             { content: "\f02b"; }
+.gi-crosshairs::before      { content: "\f05b"; }
+.gi-pencil-square::before   { content: "\f14b"; }
+.gi-pencil::before          { content: "\f303"; }
+.gi-share-alt::before       { content: "\f1e0"; }
+.gi-angle-up::before        { content: "\f106"; }
+.gi-fire::before            { content: "\f06d"; }
+
+/* Regular icons */
+.gi-regular.gi-comment::before { content: "\f075"; }
+.gi-regular.gi-user::before    { content: "\f007"; }
+.gi-regular.gi-clock::before   { content: "\f017"; }
+
+/* Old "-o" smile name = regular smile/face-smile */
+.gi-smile-o {
+    font-family: "Font Awesome 7 Free" !important;
+    font-weight: 400 !important;
+}
+.gi-smile-o::before         { content: "\f118"; }
+
+/* ---------------------------------------------------------
+   Common social/brand legacy mappings.
+   These are included defensively because template can create
+   social icons dynamically rather than storing them directly
+   in the Blogger XML.
+   --------------------------------------------------------- */
+.gib.gi-twitter::before,
+.gi-brands.gi-twitter::before      { content: "\f099"; }
+
+.gib.gi-facebook::before,
+.gi-brands.gi-facebook::before     { content: "\f09a"; }
+
+.gib.gi-instagram::before,
+.gi-brands.gi-instagram::before    { content: "\f16d"; }
+
+.gib.gi-youtube::before,
+.gi-brands.gi-youtube::before      { content: "\f167"; }
+
+.gib.gi-reddit::before,
+.gi-brands.gi-reddit::before       { content: "\f1a1"; }
+
+.gib.gi-linkedin::before,
+.gi-brands.gi-linkedin::before     { content: "\f08c"; }
+
+.gib.gi-pinterest::before,
+.gi-brands.gi-pinterest::before    { content: "\f0d2"; }
+
+.gib.gi-github::before,
+.gi-brands.gi-github::before       { content: "\f09b"; }
+
+/* Font Awesome 7 Bluesky */
+.gib.gi-bluesky::before,
+.gi-brands.gi-bluesky::before      { content: "\e671"; }
