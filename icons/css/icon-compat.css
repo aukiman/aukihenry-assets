@@ -79,6 +79,15 @@
 .gi-pencil::before          { content: "\f303"; }
 .gi-share-alt::before       { content: "\f1e0"; }
 .gi-angle-up::before        { content: "\f106"; }
+
+/* Carousel / navigation arrows */
+.gi-angle-left::before      { content: "\f104"; }
+.gi-angle-right::before     { content: "\f105"; }
+.gi-chevron-left::before    { content: "\f053"; }
+.gi-chevron-right::before   { content: "\f054"; }
+.gi-arrow-left::before      { content: "\f060"; }
+.gi-arrow-right::before     { content: "\f061"; }
+
 .gi-fire::before            { content: "\f06d"; }
 
 /* Regular icons */
@@ -95,7 +104,7 @@
 
 /* ---------------------------------------------------------
    Common social/brand legacy mappings.
-   These are included defensively because template can create
+   These are included defensively because MagOne can create
    social icons dynamically rather than storing them directly
    in the Blogger XML.
    --------------------------------------------------------- */
